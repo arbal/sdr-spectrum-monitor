@@ -12,6 +12,7 @@ RUN apt-get install sox
 RUN apt-get install portaudio19-dev
 RUN apt-get install libasound2-dev
 RUN apt-get install direwolf
+RUN apt-get install asciidoc automake libtool texinfo gfortran libhamlib-dev qtbase5-dev qtmultimedia5-dev qttools5-dev asciidoctor libqt5serialport5-dev qttools5-dev-tools libudev-dev xsltproc
 
 RUN libtoolize
 
