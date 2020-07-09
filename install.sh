@@ -1,5 +1,8 @@
 #!/bin/sh
 
+apt install libtool
+apt install autoconf
+
 #Fetch and build rtl-sdr
 echo "***** building rtl-sdr *****"
 cd /usr/src/app
