@@ -37,7 +37,7 @@ git clone https://github.com/fallenangel3k/csdr.git
 #Compile libcsdr (which is a dependency of OpenWebRX)
 echo "***** compiling libcsdr *****"
 cd csdr
-autoreconf -i
-./configure
+sudo autoreconf -i
+sudo ./configure
 make
 sudo make install
