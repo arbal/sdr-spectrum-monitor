@@ -59,4 +59,31 @@ make
 sudo make install
 cd ../..
 
+git clone https://github.com/szechyjs/mbelib.git
+cd mbelib
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ../..
+
+git clone https://github.com/jketterl/digiham.git
+cd digiham
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ../..
+
+git clone https://github.com/f4exb/dsd.git
+cd dsd
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ../..
+
 
