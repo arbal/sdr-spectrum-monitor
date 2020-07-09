@@ -86,4 +86,6 @@ make
 sudo make install
 cd ../..
 
+sudo git clone https://github.com/hessu/aprs-symbols /opt/aprs-symbols
+
 
