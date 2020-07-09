@@ -40,17 +40,17 @@ else:
 
 print "config_alt hostname: " + sh
 server_hostname=sh # If this contains an incorrect value, the web UI may freeze on load (it can't open websocket)
-max_clients=int(os.getenv('ORX_MAX_CLIENTS', 20))
+max_clients=int(os.getenv('ORX_MAX_CLIENTS', 5))
 
 # ==== Web GUI configuration ====
 receiver_name=os.getenv('ORX_NAME', 'My-SDR')
-receiver_location=os.getenv('ORX_LOCATION', 'Home')
+receiver_location=os.getenv('ORX_LOCATION', 'Nibiru')
 receiver_qra=" "
 receiver_asl=200
 receiver_ant="Antenna"
 receiver_device="RTL-SDR"
-receiver_admin="example@example.com"
-receiver_gps=(47.000000,19.000000)
+receiver_admin="fallenangel3k@googlemail.com"
+receiver_gps=(50.000000,9.000000)
 photo_height=350
 photo_title="OpenWebRX"
 photo_desc="""
@@ -76,10 +76,10 @@ fft_size=4096 #Should be power of 2
 fft_voverlap_factor=0.3 #If fft_voverlap_factor is above 0, multiple FFTs will be used for creating a line on the diagram.
 
 # samp_rate = 250000
-samp_rate = int(os.getenv('ORX_SAMP_RATE', 2400000))
+samp_rate = int(os.getenv('ORX_SAMP_RATE', 1400000))
 center_freq = int(os.getenv('ORX_CENTER_FREQ', 144250000))
-rf_gain = 5 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
-ppm = 0
+rf_gain = 0 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
+ppm = -78
 
 audio_compression="adpcm" #valid values: "adpcm", "none"
 fft_compression="adpcm" #valid values: "adpcm", "none"
