@@ -32,12 +32,31 @@ git clone https://github.com/fallenangel3k/csdr.git
 #cp -f /tmp/fft_fftw.c /usr/src/app/csdr/fft_fftw.c
 #cp -f /tmp/fft_fftw.h /usr/src/app/csdr/fft_fftw.h
 
-#cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
+cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
 
 #Compile libcsdr (which is a dependency of OpenWebRX)
 echo "***** compiling libcsdr *****"
 cd csdr
-sudo autoreconf -i
-sudo ./configure
+autoreconf -i
+./configure
 make
 sudo make install
+cd ..
+sudo ldconfig
+
+#mynewstuff
+git clone https://github.com/jketterl/js8py.git
+cd js8py
+sudo python3 setup.py install
+cd ..
+
+git clone https://github.com/jketterl/owrx_connector.git
+cd owrx_connector
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ../..
+
+
