@@ -28,7 +28,7 @@ RUN ["/usr/src/app/install.sh"]
 
 COPY entry.sh /usr/src/app/entry.sh
 RUN ["chmod", "+x", "/usr/src/app/entry.sh"]
-RUN apt-get upgrade -y
+#RUN apt-get upgrade -y
 
 COPY config_alt.py /usr/src/app/openwebrx/config_alt.py
 
