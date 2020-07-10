@@ -39,7 +39,7 @@ cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
 echo "***** compiling libcsdr *****"
 cd csdr
 autoreconf -i
-./configure
+./configure --enable-float
 make
 sudo make install
 cd ..
