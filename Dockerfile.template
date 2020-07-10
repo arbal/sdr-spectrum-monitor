@@ -15,6 +15,9 @@ COPY install_go.sh /usr/src/app/install_go.sh
 RUN ["chmod", "+x", "/usr/src/app/install_go.sh"]
 RUN ["/usr/src/app/install_go.sh"]
 
+RUN echo "export PATH=/usr/local/go/bin:${PATH}" >> /root/.bashrc
+
+
 RUN apt-get install sox
 RUN apt-get install portaudio19-dev
 RUN apt-get install libasound2-dev
