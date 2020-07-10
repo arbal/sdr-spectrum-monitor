@@ -23,6 +23,7 @@ sudo bash -c 'echo -e "\n# for RTL-SDR:\nblacklist dvb_usb_rtl28xxu\n" >> /etc/m
 sudo rmmod dvb_usb_rtl28xxu 
 
 #Download OpenWebRX and libcsdr
+cd /usr/src/app
 git clone https://github.com/fallenangel3k/openwebrx.git
 git clone https://github.com/fallenangel3k/csdr.git
 
