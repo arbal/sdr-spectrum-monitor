@@ -38,8 +38,6 @@ cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
 #Compile libcsdr (which is a dependency of OpenWebRX)
 echo "***** compiling libcsdr *****"
 cd csdr
-libtoolize -i
-aclocal
 autoreconf -i
 ./configure
 make
