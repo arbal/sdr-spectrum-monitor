@@ -47,6 +47,13 @@ cd ..
 sudo ldconfig
 
 #mynewstuff
+
+git clone https://go.googlesource.com/go goroot
+cd goroot
+cd src
+./all.bash
+cd ../..
+
 go get -u github.com/tweekmonster/nmux/cmd/nmux
 
 git clone https://github.com/jketterl/js8py.git
