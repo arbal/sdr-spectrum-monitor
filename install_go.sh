@@ -1,6 +1,6 @@
 #!/bin/sh
 
-curl -O https://golang.org/dl/go1.14.4.linux-armv6l.tar.gz
+wget https://golang.org/dl/go1.14.4.linux-armv6l.tar.gz
 tar -xvf go1.14.4.linux-armv6l.tar.gz
 
 
