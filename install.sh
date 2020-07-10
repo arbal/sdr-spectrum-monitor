@@ -25,8 +25,9 @@ sudo rmmod dvb_usb_rtl28xxu
 #Download OpenWebRX and libcsdr
 cd /usr/src/app
 git clone https://github.com/fallenangel3k/openwebrx.git
-git clone https://github.com/fallenangel3k/csdr.git
+#git clone https://github.com/fallenangel3k/csdr.git
 
+"""
 #Apply unmerged changes from this branch: https://github.com/jketterl/csdr/tree/fix_arm_slow_timer
 #Fixes 30 second start delay
 cp -f /tmp/Makefile /usr/src/app/csdr/Makefile.armv6
@@ -44,6 +45,12 @@ make
 sudo make install
 cd ..
 sudo ldconfig
+"""
+
+
+git clone https://github.com/F5OEO/rpitx
+cd rpitx
+./install.sh
 
 #mynewstuff
 
