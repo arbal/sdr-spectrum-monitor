@@ -9,7 +9,7 @@ RUN apt-get -y install neovim netcat libtool autoconf libfftw3-dev cmake libusb-
 #RUN ["/usr/src/app/install_go.sh"]
 #RUN echo "export PATH=/usr/local/go/bin:${PATH}" >> /root/.bashrc
 
-#RUN libtoolize
+RUN libtoolize
 
 RUN mkdir -p /tmp
 COPY fft_fftw.c /tmp/fft_fftw.c
