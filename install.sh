@@ -38,8 +38,8 @@ cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
 #Compile libcsdr (which is a dependency of OpenWebRX)
 echo "***** compiling libcsdr *****"
 cd csdr
+libtoolize -i
 aclocal
-libtoolize
 autoreconf -i
 ./configure
 make
@@ -48,13 +48,7 @@ cd ..
 sudo ldconfig
 
 #mynewstuff
-"""
-git clone https://go.googlesource.com/go goroot
-cd goroot
-cd src
-./all.bash
-cd /usr/src/app
-"""
+
 go get -u github.com/tweekmonster/nmux/cmd/nmux
 
 git clone https://github.com/jketterl/js8py.git
