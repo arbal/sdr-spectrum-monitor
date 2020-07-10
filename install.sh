@@ -47,6 +47,8 @@ cd ..
 sudo ldconfig
 
 #mynewstuff
+go get -u github.com/tweekmonster/nmux/cmd/nmux
+
 git clone https://github.com/jketterl/js8py.git
 cd js8py
 sudo python3 setup.py install
