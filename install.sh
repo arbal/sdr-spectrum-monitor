@@ -80,3 +80,17 @@ cd ../..
 sudo git clone https://github.com/hessu/aprs-symbols /opt/aprs-symbols
 
 
+
+wget http://physics.princeton.edu/pulsar/k1jt/wsjtx-2.1.2.tgz
+tar xvfz wsjtx-2.1.2.tgz
+cd wsjtx-2.1.2
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd ../..
+
+
+
+
