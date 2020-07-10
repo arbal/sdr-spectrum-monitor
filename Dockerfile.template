@@ -1,8 +1,8 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:2-build
 
 RUN apt-get update
-RUN apt-get -y install mplayer octave gnuplot gnuplot-x11 automake golang neovim netcat libtool autoconf libfftw3-dev cmake libusb-1.0-0-dev git build-essential cmake libfftw3-dev python3 python3-setuptools rtl-sdr netcat libitpp-dev libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config sox portaudio19-dev libasound2-dev direwolf asciidoc automake libtool texinfo gfortran libhamlib-dev qtbase5-dev qtmultimedia5-dev qttools5-dev asciidoctor libqt5serialport5-dev qttools5-dev-tools libudev-dev xsltproc
-RUN apt-get upgrade -y
+RUN apt-get -y install mplayer libfftw3-dev octave gnuplot gnuplot-x11 automake golang neovim netcat libtool autoconf libfftw3-dev cmake libusb-1.0-0-dev git build-essential cmake libfftw3-dev python3 python3-setuptools rtl-sdr netcat libitpp-dev libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config sox portaudio19-dev libasound2-dev direwolf asciidoc automake libtool texinfo gfortran libhamlib-dev qtbase5-dev qtmultimedia5-dev qttools5-dev asciidoctor libqt5serialport5-dev qttools5-dev-tools libudev-dev xsltproc
+#RUN apt-get upgrade -y
 
 RUN mkdir -p /tmp
 COPY fft_fftw.c /tmp/fft_fftw.c
