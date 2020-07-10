@@ -9,12 +9,12 @@ RUN apt-get install libsoapysdr0.6 libsoapysdr-dev soapysdr-tools
 RUN apt-get install soapysdr-module-all
 
 
-#RUN apt-get upgrade -y
+RUN apt-get upgrade -y
 
 RUN mkdir -p /tmp
-#COPY fft_fftw.c /tmp/fft_fftw.c
-#COPY fft_fftw.h /tmp/fft_fftw.h
-#COPY Makefile /tmp/Makefile
+COPY fft_fftw.c /tmp/fft_fftw.c
+pCOPY fft_fftw.h /tmp/fft_fftw.h
+COPY Makefile /tmp/Makefile
 COPY sdrhu.py /tmp/sdrhu.py
 
 COPY install.sh /usr/src/app/install.sh
