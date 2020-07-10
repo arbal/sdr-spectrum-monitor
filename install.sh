@@ -29,9 +29,9 @@ git clone https://github.com/fallenangel3k/csdr.git
 
 #Apply unmerged changes from this branch: https://github.com/jketterl/csdr/tree/fix_arm_slow_timer
 #Fixes 30 second start delay
-#cp -f /tmp/Makefile /usr/src/app/csdr/Makefile
-#cp -f /tmp/fft_fftw.c /usr/src/app/csdr/fft_fftw.c
-#cp -f /tmp/fft_fftw.h /usr/src/app/csdr/fft_fftw.h
+cp -f /tmp/Makefile /usr/src/app/csdr/Makefile
+cp -f /tmp/fft_fftw.c /usr/src/app/csdr/fft_fftw.c
+cp -f /tmp/fft_fftw.h /usr/src/app/csdr/fft_fftw.h
 
 cp -f /tmp/sdrhu.py /usr/src/app/openwebrx/sdrhu.py
 
