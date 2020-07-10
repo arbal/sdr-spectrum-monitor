@@ -1,5 +1,5 @@
 #!/bin/sh
-
+"""
 #Fetch and build rtl-sdr
 echo "***** building rtl-sdr *****"
 cd /usr/src/app
@@ -13,7 +13,7 @@ sudo make install
 sudo ldconfig
 cd ../..
 echo "***** finished building rtl-sdr *****"
-
+"""
 #Disable the DVB-T driver, which would prevent the rtl_sdr tool from accessing the stick
 #(if you want to use it for DVB-T reception later, you should undo this change):
 echo "***** disabling DVB-T driver *****"
