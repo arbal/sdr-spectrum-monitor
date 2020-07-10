@@ -48,13 +48,13 @@ cd ..
 sudo ldconfig
 
 #mynewstuff
-
+"""
 git clone https://go.googlesource.com/go goroot
 cd goroot
 cd src
 ./all.bash
-cd ../..
-
+cd /usr/src/app
+"""
 go get -u github.com/tweekmonster/nmux/cmd/nmux
 
 git clone https://github.com/jketterl/js8py.git
