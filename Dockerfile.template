@@ -5,9 +5,9 @@ RUN apt-get -y install mplayer libfftw3-dev octave gnuplot gnuplot-x11 automake 
 #RUN apt-get upgrade -y
 
 RUN mkdir -p /tmp
-COPY fft_fftw.c /tmp/fft_fftw.c
-COPY fft_fftw.h /tmp/fft_fftw.h
-COPY Makefile /tmp/Makefile
+#COPY fft_fftw.c /tmp/fft_fftw.c
+#COPY fft_fftw.h /tmp/fft_fftw.h
+#COPY Makefile /tmp/Makefile
 COPY sdrhu.py /tmp/sdrhu.py
 
 COPY install.sh /usr/src/app/install.sh
