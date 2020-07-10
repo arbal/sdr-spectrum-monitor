@@ -19,5 +19,6 @@ fi
 
 # run with our custom config file
 cd /usr/src/app/openwebrx
+chmod +x openwebrx.py
 #python openwebrx.py config_alt
 ./openwebrx.py
