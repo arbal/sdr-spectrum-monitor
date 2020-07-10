@@ -9,8 +9,6 @@ RUN apt-get -y install curl automake golang neovim netcat libtool autoconf libff
 #RUN ["/usr/src/app/install_go.sh"]
 #RUN echo "export PATH=/usr/local/go/bin:${PATH}" >> /root/.bashrc
 
-RUN libtoolize
-
 RUN mkdir -p /tmp
 COPY fft_fftw.c /tmp/fft_fftw.c
 COPY fft_fftw.h /tmp/fft_fftw.h
