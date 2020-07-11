@@ -35,16 +35,6 @@ git clone https://github.com/fallenangel3k/openwebrx.git
 go get -u github.com/tweekmonster/nmux/cmd/nmux
 cd /usr/src/app
 
-#very important! connector
-git clone https://github.com/fallenangel3k/owrx_connector.git
-cd owrx_connector
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-cd /usr/src/app
-
 #rpitx installs most of the important stuff!!
 git clone https://github.com/fallenangel3k/rpitx
 cd rpitx
@@ -89,6 +79,16 @@ cd /usr/src/app
 wget http://physics.princeton.edu/pulsar/k1jt/wsjtx-2.1.2.tgz
 tar xvfz wsjtx-2.1.2.tgz
 cd wsjtx-2.1.2
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+cd /usr/src/app
+
+#very important! connector
+git clone https://github.com/fallenangel3k/owrx_connector.git
+cd owrx_connector
 mkdir build
 cd build
 cmake ..
