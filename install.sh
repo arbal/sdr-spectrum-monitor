@@ -52,6 +52,7 @@ cd build
 cmake ..
 make
 sudo make install
+sudo ldconfig
 cd /usr/src/app
 
 git clone https://github.com/jketterl/digiham.git
@@ -93,6 +94,7 @@ cd build
 cmake ..
 make
 sudo make install
+sudo ldconfig
 cd /usr/src/app
 
 
