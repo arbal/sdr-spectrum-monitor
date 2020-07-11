@@ -33,6 +33,7 @@ git clone https://github.com/fallenangel3k/openwebrx.git
 
 #mynewstuff
 go get -u github.com/tweekmonster/nmux/cmd/nmux
+cd /usr/src/app
 
 git clone https://github.com/F5OEO/rpitx
 cd rpitx
