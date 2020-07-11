@@ -28,7 +28,7 @@ echo "***** Begin Setup *****"
 cd /usr/src/app
 
 #Download OpenWebRX
-#git clone https://github.com/fallenangel3k/openwebrx.git
+git clone https://github.com/fallenangel3k/openwebrx.git
 
 #mynewstuff
 go get -u github.com/tweekmonster/nmux/cmd/nmux
