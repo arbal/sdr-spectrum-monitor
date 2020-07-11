@@ -7,13 +7,14 @@ RUN apt install git golang make cmake build-essential libfftw3-dev python3 pytho
 RUN mkdir -p /mytmp
 COPY fft_fftw.c /mytmp/fft_fftw.c
 COPY fft_fftw.h /mytmp/fft_fftw.h
-COPY myconf.py /mytmp/myconf.py
-COPY config_alt.py /mytmp/config_alt.py
+#COPY myconf.py /mytmp/myconf.py
+
 
 COPY install.sh /usr/src/app/install.sh
 RUN ["chmod", "+x", "/usr/src/app/install.sh"]
 RUN ["/usr/src/app/install.sh"]
 
 COPY entry.sh /usr/src/app/entry.sh
+COPY config_alt.py /usr/src/app/config_alt.py
 RUN ["chmod", "+x", "/usr/src/app/entry.sh"]
 CMD ["bash","/usr/src/app/entry.sh"]
