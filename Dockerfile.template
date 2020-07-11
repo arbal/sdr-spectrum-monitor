@@ -4,6 +4,7 @@ RUN apt-get update && apt-get upgrade -y
 #RUN apt install mplayer libfftw3-dev octave gnuplot gnuplot-x11 automake golang neovim netcat libtool autoconf libfftw3-dev cmake libusb-1.0-0-dev git build-essential cmake libfftw3-dev python3 python3-setuptools rtl-sdr netcat libitpp-dev libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config sox portaudio19-dev libasound2-dev direwolf asciidoc automake libtool texinfo gfortran libhamlib-dev qtbase5-dev qtmultimedia5-dev qttools5-dev asciidoctor libqt5serialport5-dev qttools5-dev-tools libudev-dev xsltproc libsoapysdr0.6 libsoapysdr-dev soapysdr-tools soapysdr-module-all
 RUN apt install git golang make cmake build-essential libfftw3-dev python3 python3-setuptools rtl-sdr netcat libitpp-dev libsndfile-dev librtlsdr-dev automake autoconf libtool pkg-config libsoapysdr0.6 libsoapysdr-dev soapysdr-tools soapysdr-module-all sox portaudio19-dev libasound2-dev direwolf asciidoc texinfo gfortran libhamlib-dev qtbase5-dev qtmultimedia5-dev qttools5-dev asciidoctor libqt5serialport5-dev qttools5-dev-tools libudev-dev xsltproc 
 
+RUN apt-get install -y ca-certificates wget
 RUN wget -O - https://repo.openwebrx.de/debian/key.gpg.txt | apt-key add
 RUN echo "deb https://repo.openwebrx.de/ubuntu/ focal main" > /etc/apt/sources.list.d/openwebrx.list
 RUN apt-get update
