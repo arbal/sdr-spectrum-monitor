@@ -78,7 +78,7 @@ fft_voverlap_factor=0 #If fft_voverlap_factor is above 0, multiple FFTs will be 
 # samp_rate = 250000
 samp_rate = int(os.getenv('ORX_SAMP_RATE', 900001))
 center_freq = int(os.getenv('ORX_CENTER_FREQ', 89300000))
-rf_gain = 0 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
+rf_gain = 43 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
 ppm = -78
 
 audio_compression="adpcm" #valid values: "adpcm", "none"
