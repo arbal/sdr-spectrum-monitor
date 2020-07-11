@@ -71,9 +71,9 @@ else:
   print "sdr.hu listing set: false"
     
 # ==== DSP/RX settings ====
-fft_fps=9
-fft_size=4096 #Should be power of 2
-fft_voverlap_factor=0.3 #If fft_voverlap_factor is above 0, multiple FFTs will be used for creating a line on the diagram.
+fft_fps=3
+fft_size=1024 #Should be power of 2
+fft_voverlap_factor=0 #If fft_voverlap_factor is above 0, multiple FFTs will be used for creating a line on the diagram.
 
 # samp_rate = 250000
 samp_rate = int(os.getenv('ORX_SAMP_RATE', 1400000))
@@ -108,8 +108,8 @@ Note: if you experience audio underruns while CPU usage is 100%, you can:
 # You can use other SDR hardware as well, by giving your own command that outputs the I/Q samples... Some examples of configuration are available here (default is RTL-SDR):
 
 # >> RTL-SDR via rtl_sdr
-start_rtl_command="rtl_sdr -s {samp_rate} -f {center_freq} -p {ppm} -g {rf_gain} -".format(rf_gain=rf_gain, center_freq=center_freq, samp_rate=samp_rate, ppm=ppm)
-format_conversion="csdr convert_u8_f"
+#start_rtl_command="rtl_sdr -s {samp_rate} -f {center_freq} -p {ppm} -g {rf_gain} -".format(rf_gain=rf_gain, center_freq=center_freq, samp_rate=samp_rate, ppm=ppm)
+#format_conversion="csdr convert_u8_f"
 
 #lna_gain=8
 #rf_amp=1
@@ -151,8 +151,8 @@ To use a HackRF, compile the HackRF host tools from its "stdout" branch:
 # * the vendor-specific SoapySDR wrapper library, 
 # * and SoapySDR itself.
 # Check out this article on the OpenWebRX Wiki: https://github.com/simonyiszk/openwebrx/wiki/Using-rx_tools-with-OpenWebRX/
-#start_rtl_command="rx_sdr -F CF32 -s {samp_rate} -f {center_freq} -p {ppm} -g {rf_gain} -".format(rf_gain=rf_gain, center_freq=center_freq, samp_rate=samp_rate, ppm=ppm)
-#format_conversion=""
+start_rtl_command="rx_sdr -F CF32 -s {samp_rate} -f {center_freq} -p {ppm} -g {rf_gain} -".format(rf_gain=rf_gain, center_freq=center_freq, samp_rate=samp_rate, ppm=ppm)
+format_conversion="csdr convert_u8_f"
 
 # >> gr-osmosdr signal source using GNU Radio (follow this guide: https://github.com/simonyiszk/openwebrx/wiki/Using-GrOsmoSDR-as-signal-source)
 #start_rtl_command="cat /tmp/osmocom_fifo"
@@ -162,7 +162,7 @@ To use a HackRF, compile the HackRF host tools from its "stdout" branch:
 
 shown_center_freq = center_freq #you can change this if you use an upconverter
 
-client_audio_buffer_size = 5
+client_audio_buffer_size = 4
 #increasing client_audio_buffer_size will:
 # - also increase the latency
 # - decrease the chance of audio underruns
