@@ -29,10 +29,6 @@ cd /usr/src/app
 
 #Download OpenWebRX
 #git clone https://github.com/fallenangel3k/openwebrx.git
-wget -O - https://repo.openwebrx.de/debian/key.gpg.txt | apt-key add
-echo "deb https://repo.openwebrx.de/ubuntu/ focal main" > /etc/apt/sources.list.d/openwebrx.list
-apt-get update
-apt-get install openwebrx
 
 #mynewstuff
 go get -u github.com/tweekmonster/nmux/cmd/nmux
