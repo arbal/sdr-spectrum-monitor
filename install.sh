@@ -11,7 +11,7 @@ cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
 make
 sudo make install
 sudo ldconfig
-cd ../..
+cd /usr/src/app
 echo "***** finished building rtl-sdr *****"
 
 #Disable the DVB-T driver, which would prevent the rtl_sdr tool from accessing the stick
@@ -25,9 +25,9 @@ sudo rmmod dvb_usb_rtl28xxu
 
 
 echo "***** Begin Setup *****"
+cd /usr/src/app
 
 #Download OpenWebRX
-cd /usr/src/app
 git clone https://github.com/fallenangel3k/openwebrx.git
 
 
@@ -43,17 +43,18 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
+cd /usr/src/app
 
 #rpitx installs most of the important stuff!!
 git clone https://github.com/fallenangel3k/rpitx
 cd rpitx
 ./install.sh
+cd /usr/src/app
 
 git clone https://github.com/jketterl/js8py.git
 cd js8py
 sudo python3 setup.py install
-cd ..
+cd /usr/src/app
 
 git clone https://github.com/szechyjs/mbelib.git
 cd mbelib
@@ -62,7 +63,7 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
+cd /usr/src/app
 
 git clone https://github.com/jketterl/digiham.git
 cd digiham
@@ -71,7 +72,7 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
+cd /usr/src/app
 
 git clone https://github.com/f4exb/dsd.git
 cd dsd
@@ -80,9 +81,10 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
+cd /usr/src/app
 
 sudo git clone https://github.com/hessu/aprs-symbols /opt/aprs-symbols
+cd /usr/src/app
 
 wget http://physics.princeton.edu/pulsar/k1jt/wsjtx-2.1.2.tgz
 tar xvfz wsjtx-2.1.2.tgz
@@ -92,8 +94,7 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
-
+cd /usr/src/app
 
 
 
