@@ -36,7 +36,7 @@ go get -u github.com/tweekmonster/nmux/cmd/nmux
 cd /usr/src/app
 
 #very important! connector
-git clone https://github.com/jketterl/owrx_connector.git
+git clone https://github.com/fallenangel3k/owrx_connector.git
 cd owrx_connector
 mkdir build
 cd build
@@ -46,7 +46,7 @@ sudo make install
 cd ../..
 
 #rpitx installs most of the important stuff!!
-git clone https://github.com/F5OEO/rpitx
+git clone https://github.com/fallenangel3k/rpitx
 cd rpitx
 ./install.sh
 
