@@ -71,13 +71,13 @@ else:
   print "sdr.hu listing set: false"
     
 # ==== DSP/RX settings ====
-fft_fps=3
+fft_fps=5
 fft_size=1024 #Should be power of 2
 fft_voverlap_factor=0 #If fft_voverlap_factor is above 0, multiple FFTs will be used for creating a line on the diagram.
 
 # samp_rate = 250000
-samp_rate = int(os.getenv('ORX_SAMP_RATE', 1400000))
-center_freq = int(os.getenv('ORX_CENTER_FREQ', 144250000))
+samp_rate = int(os.getenv('ORX_SAMP_RATE', 900001))
+center_freq = int(os.getenv('ORX_CENTER_FREQ', 89300000))
 rf_gain = 0 #in dB. For an RTL-SDR, rf_gain=0 will set the tuner to auto gain mode, else it will be in manual gain mode.
 ppm = -78
 
