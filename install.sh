@@ -22,19 +22,21 @@ sudo bash -c 'echo -e "\n# for RTL-SDR:\nblacklist dvb_usb_rtl28xxu\n" >> /etc/m
 #Disable the problematic kernel module for the current session:
 sudo rmmod dvb_usb_rtl28xxu 
 
-#Download OpenWebRX and libcsdr
+
+
+echo "***** Begin Setup *****"
+
+#Download OpenWebRX
 cd /usr/src/app
 git clone https://github.com/fallenangel3k/openwebrx.git
-#git clone https://github.com/fallenangel3k/csdr.git
 
+
+#mynewstuff
+go get -u github.com/tweekmonster/nmux/cmd/nmux
 
 git clone https://github.com/F5OEO/rpitx
 cd rpitx
 ./install.sh
-
-#mynewstuff
-
-go get -u github.com/tweekmonster/nmux/cmd/nmux
 
 git clone https://github.com/jketterl/js8py.git
 cd js8py
@@ -79,8 +81,6 @@ cd ../..
 
 sudo git clone https://github.com/hessu/aprs-symbols /opt/aprs-symbols
 
-
-
 wget http://physics.princeton.edu/pulsar/k1jt/wsjtx-2.1.2.tgz
 tar xvfz wsjtx-2.1.2.tgz
 cd wsjtx-2.1.2
@@ -90,6 +90,12 @@ cmake ..
 make
 sudo make install
 cd ../..
+
+
+
+
+echo "***** Setup complete!!! *****"
+
 
 
 
