@@ -28,7 +28,7 @@ echo "***** Begin Setup *****"
 cd /usr/src/app
 
 #Download OpenWebRX
-git clone https://github.com/fallenangel3k/openwebrx.git
+#git clone https://github.com/fallenangel3k/openwebrx.git
 wget -O - https://repo.openwebrx.de/debian/key.gpg.txt | apt-key add
 echo "deb https://repo.openwebrx.de/ubuntu/ focal main" > /etc/apt/sources.list.d/openwebrx.list
 apt-get update
