@@ -2,4 +2,4 @@
 
 # run OpenWebRX
 cd /usr/src/app/openwebrx
-./openwebrx.py
+./openwebrx.py config_alt
