@@ -35,15 +35,7 @@ git clone https://github.com/fallenangel3k/openwebrx.git
 go get -u github.com/tweekmonster/nmux/cmd/nmux
 cd /usr/src/app
 
-git clone https://github.com/F5OEO/rpitx
-cd rpitx
-./install.sh
-
-git clone https://github.com/jketterl/js8py.git
-cd js8py
-sudo python3 setup.py install
-cd ..
-
+#very important! connector
 git clone https://github.com/jketterl/owrx_connector.git
 cd owrx_connector
 mkdir build
@@ -52,6 +44,16 @@ cmake ..
 make
 sudo make install
 cd ../..
+
+#rpitx installs most of the important stuff!!
+git clone https://github.com/F5OEO/rpitx
+cd rpitx
+./install.sh
+
+git clone https://github.com/jketterl/js8py.git
+cd js8py
+sudo python3 setup.py install
+cd ..
 
 git clone https://github.com/szechyjs/mbelib.git
 cd mbelib
