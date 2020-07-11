@@ -24,7 +24,7 @@ sudo rmmod dvb_usb_rtl28xxu
 
 
 
-echo "***** Begin Setup *****"
+echo "***** Begin Setup!!! *****"
 cd /usr/src/app
 
 #Download OpenWebRX
