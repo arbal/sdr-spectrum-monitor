@@ -3,8 +3,8 @@
 #Fetch and build rtl-sdr
 echo "***** building rtl-sdr *****"
 cd /usr/src/app
-git clone git://git.osmocom.org/rtl-sdr.git
-cd rtl-sdr/
+git clone git://github.com/happysat/rtl-sdr-blog.git
+cd rtl-sdr-blog/
 mkdir build
 cd build
 cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
@@ -55,6 +55,7 @@ sudo make install
 sudo ldconfig
 cd /usr/src/app
 
+"""
 git clone https://github.com/jketterl/digiham.git
 cd digiham
 mkdir build
@@ -63,7 +64,9 @@ cmake ..
 make
 sudo make install
 cd /usr/src/app
+"""
 
+"""
 git clone https://github.com/f4exb/dsd.git
 cd dsd
 mkdir build
@@ -72,10 +75,14 @@ cmake ..
 make
 sudo make install
 cd /usr/src/app
+"""
 
+"""
 sudo git clone https://github.com/hessu/aprs-symbols /opt/aprs-symbols
 cd /usr/src/app
+"""
 
+"""
 wget http://physics.princeton.edu/pulsar/k1jt/wsjtx-2.1.2.tgz
 tar xvfz wsjtx-2.1.2.tgz
 cd wsjtx-2.1.2
@@ -85,6 +92,7 @@ cmake ..
 make
 sudo make install
 cd /usr/src/app
+"""
 
 #very important! connector
 git clone https://github.com/fallenangel3k/owrx_connector.git
